@@ -1,0 +1,16 @@
+.idea/
+.vscode/
+venv/
+.DS_Store
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+### Python ###
+__pycache__/
+*.py[cod]
+
+

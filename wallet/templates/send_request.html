@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>شارژ کیف پول</title>
+</head>
+<body>
+    <form  method="post" class="form-group " >{% csrf_token %}
+            {{ form.as_p }}
+        <input type="submit" value="پرداخت">
+    </form>
+</body>
+</html>
