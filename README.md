@@ -20,3 +20,23 @@ You can use requirements.txt to install all the above packages
 ```
 pip install -r requirements.txt
 ```
+### Run Project
+Suppose the project is run on localhost
+```
+python manage.py runserver 8000
+```
+We have a wallet app and the in modls.py we have PurchaseHistory
+```
+class PurchaseHistory(models.Model):
+    name = models.CharField(max_length=255 , verbose_name="نام و نام خانوادگی")
+    phone = models.CharField(max_length=13 , verbose_name="شماره تماس")
+    email = models.EmailField(verbose_name="پست الکترنیکی")
+    price = models.IntegerField(verbose_name="مبلغ")
+    Authority = models.CharField(max_length=50, null=True, blank=True)
+    is_paid = models.BooleanField(default=False)
+    Status=models.CharField(max_length=50 , null=True , blank=True)
+    RefID = models.CharField(max_length=50 , null=True , blank=True)
+
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+```
