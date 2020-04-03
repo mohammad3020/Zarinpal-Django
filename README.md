@@ -30,9 +30,11 @@ Suppose the project is run on localhost
 ```
 python manage.py runserver 8000
 ```
-The project is now running on http://127.0.0.1:8000/
-You can access the payment page with the http://127.0.0.1:8000/web/zarinpal/request/
-
+The project is now running on http://127.0.0.1:8000/ \
+You can access the payment page with the following address
+```
+http://127.0.0.1:8000/web/zarinpal/request/
+```
 ### Model guidance
 We have a wallet app and the in modls.py we have PurchaseHistory
 ```
