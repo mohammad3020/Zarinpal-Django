@@ -30,7 +30,7 @@ Go to the following directory and set ZARINPAL_MERCHANT_ID to your Zarinpal MERC
 ```
 zarinpal/settings.py
 ```
-###Model guidance
+### Model guidance
 We have a wallet app and the in modls.py we have PurchaseHistory
 ```
 class PurchaseHistory(models.Model):
