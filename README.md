@@ -44,7 +44,7 @@ http://127.0.0.1:8000/web/zarinpal/verify/
 ### Django REST
 The api has also been implemented \
 All code is available in the /wallet/api folder \
-The following two addresses have been used to request and confirm
+The following two addresses have been used to request and verify
 ```
 http://127.0.0.1:8000/api/zarinpal/request/
 http://127.0.0.1:8000/api/zarinpal/verify/
