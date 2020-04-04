@@ -21,7 +21,7 @@ You can use requirements.txt to install all the above packages
 pip install -r requirements.txt
 ```
 ### Set ZARINPAL MERCHANT ID
-Go to the following directory and set ZARINPAL_MERCHANT_ID to your Zarinpal MERCHANT
+Go to the following directory and set ZARINPAL_MERCHANT_ID variable to your Zarinpal MERCHANT
 ```
 zarinpal/settings.py
 ```
@@ -35,19 +35,17 @@ You can access the payment page with the following address
 ```
 http://127.0.0.1:8000/web/zarinpal/request/
 ```
-### Model guidance
-We have a wallet app and the in modls.py we have PurchaseHistory
+In the opened page, the user must enter his information \
+All information is stored in the PurchaseHistory model \
+After paying, the user will be redirected to the address below
 ```
-class PurchaseHistory(models.Model):
-    name = models.CharField(max_length=255 , verbose_name="نام و نام خانوادگی")
-    phone = models.CharField(max_length=13 , verbose_name="شماره تماس")
-    email = models.EmailField(verbose_name="پست الکترنیکی")
-    price = models.IntegerField(verbose_name="مبلغ")
-    Authority = models.CharField(max_length=50, null=True, blank=True)
-    is_paid = models.BooleanField(default=False)
-    Status=models.CharField(max_length=50 , null=True , blank=True)
-    RefID = models.CharField(max_length=50 , null=True , blank=True)
-
-    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
-    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+http://127.0.0.1:8000/web/zarinpal/verify/
+```
+### Django REST
+The api has also been implemented \
+All code is available in the /wallet/api folder \
+The following two addresses have been used to request and confirm
+```
+http://127.0.0.1:8000/api/zarinpal/request/
+http://127.0.0.1:8000/api/zarinpal/verify/
 ```
