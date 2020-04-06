@@ -30,7 +30,8 @@ class SendRequestAPIView(APIView):
             if result.Status == 100:
                 instance = PurchaseHistory(name=data.get('name') , phone=mobile , email=email , price=amount , Authority=result.Authority)
                 instance.save()
-                return redirect('https://www.zarinpal.com/pg/StartPay/' + str(result.Authority))
+                return Response({'redirect to : ': 'https://www.zarinpal.com/pg/StartPay/' + str(result.Authority)},
+                                status=200)
             else:
                 return Response({'Error code: ' : str(result.Status)},status=400)
         else:
