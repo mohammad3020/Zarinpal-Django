@@ -25,7 +25,7 @@ class SendRequestAPIView(APIView):
             email=data.get('email')
             mobile = data.get('phone')
             domain = request.get_host()
-            CallbackURL = domain +'/api/zarinpal/verify/'
+            CallbackURL = 'http://' + domain +'/api/zarinpal/verify/'
             result = client.service.PaymentRequest(MERCHANT, amount, description, email, mobile, CallbackURL)
             if result.Status == 100:
                 instance = PurchaseHistory(name=data.get('name') , phone=mobile , email=email , price=amount , Authority=result.Authority)
